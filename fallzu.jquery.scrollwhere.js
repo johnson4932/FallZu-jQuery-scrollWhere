@@ -23,6 +23,18 @@
             }
         });
 
+        //Top
+        $('.fallzu-scroll-return-top').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, 500);
+        });
+
+        //Bottom
+        $('.fallzu-scroll-return-bottom').click(function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:$(document).height() - $(window).height()}, 500);
+        });
+
         return $(this);
     };
 })(jQuery);
