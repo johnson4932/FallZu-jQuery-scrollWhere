@@ -8,7 +8,7 @@ jQuery plugin that adds "Go Back" button to a page.
 * return to bottom
 * return to custom position
 
-[Demo Page](http://blog.johnsonlu.org)
+[Demo Page](http://johnson4932.github.io/FallZu-jQuery-scrollWhere/)
 
 ## Installation
 
