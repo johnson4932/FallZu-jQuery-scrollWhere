@@ -21,7 +21,7 @@
         });
     };
 
-    $.fn.scrollWhere = function() {
+    $.fn.scrollWhere = function(devOptions) {
         //Insert HTML
         $(this).html(' \
             <div class="fallzu-scroll-bar"> \
@@ -42,6 +42,14 @@
         setCSS();
 
         //Option
+        var defaultOptions = {
+            topBtn      : true,
+            bottomBtn   : true,
+            recordBtn   : true
+        };
+
+        var options = $.extend(defaultOptions, devOptions);
+
 
         $('.fallzu-scroll-return').hide();
         $(window).scroll(function() {
