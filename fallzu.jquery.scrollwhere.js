@@ -90,7 +90,11 @@
         $('.fallzu-scroll-record').click(function(e) {
             e.preventDefault();
             var windowHeight = $(window).scrollTop();
-            $('.fallzu-scroll-area').append('<div class="fallzu-scroll-btn fallzu-scroll-anchor" data-scroll="' + windowHeight + '"><a href="#"><i class="fa fa-file-text-o fa-3x"></i></a></div>');
+            $('.fallzu-scroll-area').append(' \
+                <div class="fallzu-scroll-btn fallzu-scroll-anchor" data-scroll="' +
+                windowHeight +
+                '"><a href="#"><i class="fa fa-file-text-o fa-3x"></i></a></div> \
+            ');
             setCSS();
 
             //Anchor
