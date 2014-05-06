@@ -50,8 +50,12 @@
 
         var options = $.extend(defaultOptions, devOptions);
 
+        //Hide
+        $('.fallzu-scroll-btn').hide();
+        if (options.recordBtn) {
+            $('.fallzu-scroll-record').show();
+        }
 
-        $('.fallzu-scroll-return').hide();
         $(window).scroll(function() {
             var returnTop = $('.fallzu-scroll-return-top').stop(true, true);
             var returnBottom = $('.fallzu-scroll-return-bottom').stop(true, true);
@@ -60,17 +64,21 @@
             var scrollHeight = $(this).scrollTop();
 
             //Top
-            if (scrollHeight) {
-                returnTop.fadeIn();
-            } else {
-                returnTop.fadeOut();
+            if (options.topBtn) {
+                if (scrollHeight) {
+                    returnTop.fadeIn();
+                } else {
+                    returnTop.fadeOut();
+                }
             }
 
             //Bottom
-            if (windowHeight + scrollHeight < documentHeight) {
-                returnBottom.fadeIn();
-            } else {
-                returnBottom.fadeOut();
+            if (options.bottomBtn) {
+                if (windowHeight + scrollHeight < documentHeight) {
+                    returnBottom.fadeIn();
+                } else {
+                    returnBottom.fadeOut();
+                }
             }
         });
 
