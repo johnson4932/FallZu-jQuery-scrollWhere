@@ -17,6 +17,7 @@
 
         $('.fallzu-scroll-btn > a').css({
             'display'       : 'block',
+            'font-size'     : '16px',
             'color'         : '#FFF'
         });
     };
