@@ -1,22 +1,5 @@
 (function($) {
-    $.fn.scrollWhere = function() {
-        //Insert HTML
-        $(this).html(' \
-            <div class="fallzu-scroll-bar"> \
-                <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-top"> \
-                    <a href="#"><i class="fa fa-angle-double-up fa-3x"></i></a> \
-                </div> \
-                <div class="fallzu-scroll-btn fallzu-scroll-record"> \
-                    <a href="#"><i class="fa fa-pencil fa-3x"></i></a> \
-                </div> \
-                <div class="fallzu-scroll-area"></div> \
-                <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-bottom"> \
-                    <a href="#"><i class="fa fa-angle-double-down fa-3x"></i></a> \
-                </div> \
-            </div> \
-        ');
-
-        //CSS
+    var setCSS = function() {
         $('.fallzu-scroll-bar').css({
             'position'      : 'fixed',
             'right'         : '30px',
@@ -36,6 +19,29 @@
             'display'       : 'block',
             'color'         : '#FFF'
         });
+    };
+
+    $.fn.scrollWhere = function() {
+        //Insert HTML
+        $(this).html(' \
+            <div class="fallzu-scroll-bar"> \
+                <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-top"> \
+                    <a href="#"><i class="fa fa-angle-double-up fa-3x"></i></a> \
+                </div> \
+                <div class="fallzu-scroll-btn fallzu-scroll-record"> \
+                    <a href="#"><i class="fa fa-pencil fa-3x"></i></a> \
+                </div> \
+                <div class="fallzu-scroll-area"></div> \
+                <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-bottom"> \
+                    <a href="#"><i class="fa fa-angle-double-down fa-3x"></i></a> \
+                </div> \
+            </div> \
+        ');
+
+        //CSS
+        setCSS();
+
+        //Option
 
         $('.fallzu-scroll-return').hide();
         $(window).scroll(function() {
@@ -77,6 +83,7 @@
             e.preventDefault();
             var windowHeight = $(window).scrollTop();
             $('.fallzu-scroll-area').append('<div class="fallzu-scroll-btn fallzu-scroll-anchor" data-scroll="' + windowHeight + '"><a href="#"><i class="fa fa-file-text-o fa-3x"></i></a></div>');
+            setCSS();
 
             //Anchor
             $('.fallzu-scroll-area .fallzu-scroll-btn:last').on('click', function(e) {
