@@ -61,6 +61,6 @@ Default : true
 ### Example
 ```javascript
 $('#scroll-bar').scrollWhere({
-bottomBtn : false
+    bottomBtn : false
 });
 ```
