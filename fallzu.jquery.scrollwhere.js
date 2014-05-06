@@ -16,6 +16,27 @@
             </div> \
         ');
 
+        //CSS
+        $('.fallzu-scroll-bar').css({
+            'position'      : 'fixed',
+            'right'         : '30px',
+            'bottom'        : '30px'
+        });
+
+        $('.fallzu-scroll-btn').css({
+            'width'         : '50px',
+            'height'        : '50px',
+            'background'    : '#333',
+            'border-radius' : '25px',
+            'text-align'    : 'center',
+            'margin-bottom' : '10px'
+        });
+
+        $('.fallzu-scroll-btn > a').css({
+            'display'       : 'block',
+            'color'         : '#FFF'
+        });
+
         $('.fallzu-scroll-return').hide();
         $(window).scroll(function() {
             var returnTop = $('.fallzu-scroll-return-top').stop(true, true);
