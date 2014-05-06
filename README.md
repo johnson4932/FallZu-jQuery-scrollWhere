@@ -42,17 +42,20 @@ $('#scroll-bar').scrollWhere();
 
 ### topBtn
 
-Show return top button
+Show return top button.
+
 Default : true
 
 ### bottomBtn
 
-Show return bottom button
+Show return bottom button.
+
 Default : true
 
 ### recordBtn
 
-Show record button
+Show record button.
+
 Default : true
 
 ### Example
