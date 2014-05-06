@@ -6,7 +6,7 @@
                 <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-top"> \
                     <a href="#"><i class="fa fa-angle-double-up fa-3x"></i></a> \
                 </div> \
-                <div class="fallzu-scroll-btn fallzu-scroll-remember"> \
+                <div class="fallzu-scroll-btn fallzu-scroll-record"> \
                     <a href="#"><i class="fa fa-pencil fa-3x"></i></a> \
                 </div> \
                 <div class="fallzu-scroll-area"></div> \
@@ -72,8 +72,8 @@
             $('html, body').animate({scrollTop:$(document).height() - $(window).height()}, 500);
         });
 
-        //Remember
-        $('.fallzu-scroll-remember').click(function(e) {
+        //Record
+        $('.fallzu-scroll-record').click(function(e) {
             e.preventDefault();
             var windowHeight = $(window).scrollTop();
             $('.fallzu-scroll-area').append('<div class="fallzu-scroll-btn fallzu-scroll-anchor" data-scroll="' + windowHeight + '"><a href="#"><i class="fa fa-file-text-o fa-3x"></i></a></div>');
