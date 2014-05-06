@@ -1,5 +1,21 @@
 (function($) {
     $.fn.scrollWhere = function() {
+        //Insert HTML
+        $(this).html(' \
+            <div class="fallzu-scroll-bar"> \
+                <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-top"> \
+                    <a href="#"><i class="fa fa-angle-double-up fa-3x"></i></a> \
+                </div> \
+                <div class="fallzu-scroll-btn fallzu-scroll-remember"> \
+                    <a href="#"><i class="fa fa-pencil fa-3x"></i></a> \
+                </div> \
+                <div class="fallzu-scroll-area"></div> \
+                <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-bottom"> \
+                    <a href="#"><i class="fa fa-angle-double-down fa-3x"></i></a> \
+                </div> \
+            </div> \
+        ');
+
         $('.fallzu-scroll-return').hide();
         $(window).scroll(function() {
             var returnTop = $('.fallzu-scroll-return-top').stop(true, true);
