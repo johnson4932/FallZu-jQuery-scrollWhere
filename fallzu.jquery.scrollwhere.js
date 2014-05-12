@@ -121,6 +121,21 @@
                 e.preventDefault();
                 $('html, body').animate({scrollTop:$(this).data('scroll')}, 500);
             });
+
+            //Anchor hover
+            $('.fallzu-scroll-area .fallzu-scroll-btn:last').hover(function() {
+                var pageHeight = $(document).height();
+                var windowHeight = $(window).height();
+                var position = $(this).data('scroll');
+
+                //Height proportion
+                var proportion  = position / pageHeight;
+                var moveTopPosition = windowHeight * proportion;
+                $('.fallzu-scroll-point').show();
+                $('.fallzu-scroll-point').css({'top' : moveTopPosition});
+            }, function() {
+                $('.fallzu-scroll-point').hide();
+            });
         });
 
         return $(this);
