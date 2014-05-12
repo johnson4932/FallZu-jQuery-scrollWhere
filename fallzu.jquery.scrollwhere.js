@@ -109,7 +109,7 @@
         $('.fallzu-scroll-record').click(function(e) {
             e.preventDefault();
             var windowHeight = $(window).scrollTop();
-            $('.fallzu-scroll-area').append(' \
+            $('.fallzu-scroll-area').prepend(' \
                 <div class="fallzu-scroll-btn fallzu-scroll-anchor" data-scroll="' +
                 windowHeight +
                 '"><a href="#"><i class="fa fa-file-text-o fa-3x"></i></a></div> \
@@ -117,13 +117,13 @@
             setCSS();
 
             //Anchor
-            $('.fallzu-scroll-area .fallzu-scroll-btn:last').on('click', function(e) {
+            $('.fallzu-scroll-area .fallzu-scroll-btn:first').on('click', function(e) {
                 e.preventDefault();
                 $('html, body').animate({scrollTop:$(this).data('scroll')}, 500);
             });
 
             //Anchor hover
-            $('.fallzu-scroll-area .fallzu-scroll-btn:last').hover(function() {
+            $('.fallzu-scroll-area .fallzu-scroll-btn:first').hover(function() {
                 var pageHeight = $(document).height();
                 var windowHeight = $(window).height();
                 var position = $(this).data('scroll');
