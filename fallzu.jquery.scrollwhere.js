@@ -1,5 +1,12 @@
 (function($) {
     var setCSS = function() {
+        $('.fallzu-scroll-point').css({
+            'position'      : 'fixed',
+            'right'         : '0px',
+            'top'           : '0px',
+            'display'       : 'none'
+        });
+
         $('.fallzu-scroll-bar').css({
             'position'      : 'fixed',
             'right'         : '30px',
@@ -25,6 +32,9 @@
     $.fn.scrollWhere = function(devOptions) {
         //Insert HTML
         $(this).html(' \
+            <div class="fallzu-scroll-point"> \
+                <i class="fa fa-hand-o-right fa-2x"></i> \
+            </div> \
             <div class="fallzu-scroll-bar"> \
                 <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-top"> \
                     <a href="#"><i class="fa fa-angle-double-up fa-3x"></i></a> \
