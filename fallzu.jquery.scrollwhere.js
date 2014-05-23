@@ -31,7 +31,7 @@
     };
 
     $.fn.scrollWhere = function(devOptions) {
-        //Insert HTML
+        // Insert HTML
         $(this).html(' \
             <div class="fallzu-scroll-point"> \
                 <i class="fa fa-hand-o-right fa-2x"></i> \
@@ -50,7 +50,7 @@
             </div> \
         ');
 
-        //Option
+        // Option
         var defaultOptions = {
             topBtn      : true,
             bottomBtn   : true,
@@ -61,10 +61,10 @@
 
         var options = $.extend(defaultOptions, devOptions);
 
-        //CSS
+        // CSS
         setCSS(options.fontColor, options.bgColor);
 
-        //Hide
+        // Hide
         $('.fallzu-scroll-btn').hide();
         if (options.recordBtn) {
             $('.fallzu-scroll-record').show();
@@ -77,7 +77,7 @@
             var documentHeight = $(document).height();
             var scrollHeight = $(this).scrollTop();
 
-            //Top
+            // Top
             if (options.topBtn) {
                 if (scrollHeight) {
                     returnTop.fadeIn();
@@ -96,19 +96,19 @@
             }
         });
 
-        //Top
+        // Top
         $('.fallzu-scroll-return-top').click(function(e) {
             e.preventDefault();
             $('html, body').animate({scrollTop:0}, 500);
         });
 
-        //Bottom
+        // Bottom
         $('.fallzu-scroll-return-bottom').click(function(e) {
             e.preventDefault();
             $('html, body').animate({scrollTop:$(document).height() - $(window).height()}, 500);
         });
 
-        //Record
+        // Record
         $('.fallzu-scroll-record').click(function(e) {
             e.preventDefault();
             var windowHeight = $(window).scrollTop();
@@ -119,13 +119,13 @@
             ');
             setCSS(options.fontColor, options.bgColor);
 
-            //Anchor
+            // Anchor
             $('.fallzu-scroll-area .fallzu-scroll-btn:first').on('click', function(e) {
                 e.preventDefault();
                 $('html, body').animate({scrollTop:$(this).data('scroll')}, 500);
             });
 
-            //Anchor hover
+            // Anchor hover
             $('.fallzu-scroll-area .fallzu-scroll-btn:first').hover(function() {
                 var pageHeight = $(document).height();
                 var windowHeight = $(window).height();
