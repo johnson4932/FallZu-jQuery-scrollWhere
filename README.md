@@ -58,6 +58,18 @@ Show record button.
 
 Default : true
 
+### fontColor
+
+Buttons font color
+
+Default : #FFF
+
+### bgColor
+
+Buttons background color
+
+Default : #333
+
 ### Example
 ```javascript
 $('#scroll-bar').scrollWhere({
