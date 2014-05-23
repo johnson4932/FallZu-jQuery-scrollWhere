@@ -1,5 +1,5 @@
 (function($) {
-    var setCSS = function() {
+    var setCSS = function(fontColor, bgColor) {
         $('.fallzu-scroll-point').css({
             'position'      : 'fixed',
             'right'         : '0px',
@@ -16,7 +16,7 @@
         $('.fallzu-scroll-btn').css({
             'width'         : '50px',
             'height'        : '50px',
-            'background'    : '#333',
+            'background'    : bgColor,
             'border-radius' : '25px',
             'text-align'    : 'center',
             'margin-bottom' : '10px'
@@ -25,7 +25,7 @@
         $('.fallzu-scroll-btn > a').css({
             'display'       : 'block',
             'font-size'     : '16px',
-            'color'         : '#FFF'
+            'color'         : fontColor
         });
     };
 
@@ -49,17 +49,19 @@
             </div> \
         ');
 
-        //CSS
-        setCSS();
-
         //Option
         var defaultOptions = {
             topBtn      : true,
             bottomBtn   : true,
-            recordBtn   : true
+            recordBtn   : true,
+            fontColor   : '#FFF',
+            bgColor     : '#333'
         };
 
         var options = $.extend(defaultOptions, devOptions);
+
+        //CSS
+        setCSS(options.fontColor, options.bgColor);
 
         //Hide
         $('.fallzu-scroll-btn').hide();
@@ -114,7 +116,7 @@
                 windowHeight +
                 '"><a href="#"><i class="fa fa-file-text-o fa-3x"></i></a></div> \
             ');
-            setCSS();
+            setCSS(options.fontColor, options.bgColor);
 
             //Anchor
             $('.fallzu-scroll-area .fallzu-scroll-btn:first').on('click', function(e) {
