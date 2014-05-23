@@ -4,6 +4,7 @@
             'position'      : 'fixed',
             'right'         : '0px',
             'top'           : '0px',
+            'color'         : fontColor,
             'display'       : 'none'
         });
 
