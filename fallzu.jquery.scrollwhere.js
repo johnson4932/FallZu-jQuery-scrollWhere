@@ -1,3 +1,11 @@
+/*!
+* FallZu-jQuery-scrollWhere v1.0.0
+* http://johnson4932.github.io/FallZu-jQuery-scrollWhere/
+*
+* Copyright (c) 2014 JohnsonLu
+* Licensed under the MIT license
+*/
+
 (function($) {
     var setCSS = function(fontColor, bgColor) {
         $('.fallzu-scroll-point').css({
