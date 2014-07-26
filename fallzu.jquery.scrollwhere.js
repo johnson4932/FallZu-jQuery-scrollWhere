@@ -32,23 +32,23 @@
 
     $.fn.scrollWhere = function(devOptions) {
         // Insert HTML
-        $(this).html(
-            '<div class="fallzu-scroll-point">' +
-                '<i class="fa fa-hand-o-right fa-2x"></i>' +
-            '</div>' +
-            '<div class="fallzu-scroll-bar">' +
-                '<div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-top">' +
-                    '<a href="#"><i class="fa fa-angle-double-up fa-3x"></i></a>' +
-                '</div>' +
-                '<div class="fallzu-scroll-btn fallzu-scroll-record">' +
-                    '<a href="#"><i class="fa fa-pencil fa-3x"></i></a>' +
-                '</div>' +
-                '<div class="fallzu-scroll-area"></div>' +
-                '<div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-bottom">' +
-                    '<a href="#"><i class="fa fa-angle-double-down fa-3x"></i></a>' +
-                '</div>' +
-            '</div>' +
-        );
+        $(this).html(' \
+            <div class="fallzu-scroll-point"> \
+                <i class="fa fa-hand-o-right fa-2x"></i> \
+            </div> \
+            <div class="fallzu-scroll-bar"> \
+                <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-top"> \
+                    <a href="#"><i class="fa fa-angle-double-up fa-3x"></i></a> \
+                </div> \
+                <div class="fallzu-scroll-btn fallzu-scroll-record"> \
+                    <a href="#"><i class="fa fa-pencil fa-3x"></i></a> \
+                </div> \
+                <div class="fallzu-scroll-area"></div> \
+                <div class="fallzu-scroll-btn fallzu-scroll-return fallzu-scroll-return-bottom"> \
+                    <a href="#"><i class="fa fa-angle-double-down fa-3x"></i></a> \
+                </div> \
+            </div> \
+        ');
 
         // Option
         var defaultOptions = {
@@ -112,11 +112,11 @@
         $('.fallzu-scroll-record').click(function(e) {
             e.preventDefault();
             var windowHeight = $(window).scrollTop();
-            $('.fallzu-scroll-area').prepend(
-                '<div class="fallzu-scroll-btn fallzu-scroll-anchor" data-scroll="' + windowHeight + '">' +
-                    '<a href="#"><i class="fa fa-file-text-o fa-3x"></i></a>'
-                '</div>'
-            );
+            $('.fallzu-scroll-area').prepend(' \
+                <div class="fallzu-scroll-btn fallzu-scroll-anchor" data-scroll="' +
+                windowHeight +
+                '"><a href="#"><i class="fa fa-file-text-o fa-3x"></i></a></div> \
+            ');
             setCSS(options.fontColor, options.bgColor);
 
             // Anchor
