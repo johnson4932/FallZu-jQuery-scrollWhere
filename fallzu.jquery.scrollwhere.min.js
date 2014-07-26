@@ -1,5 +1,5 @@
 /*!
-* FallZu-jQuery-scrollWhere v1.0.0
+* FallZu-jQuery-scrollWhere v1.0.1
 * http://johnson4932.github.io/FallZu-jQuery-scrollWhere/
 *
 * Copyright (c) 2014 JohnsonLu
