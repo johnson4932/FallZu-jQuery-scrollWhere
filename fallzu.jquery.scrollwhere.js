@@ -7,6 +7,8 @@
 */
 
 (function($) {
+    "use strict";
+
     var setCSS = function(fontColor, bgColor) {
         $('.fallzu-scroll-point').css({
             'position'      : 'fixed',
