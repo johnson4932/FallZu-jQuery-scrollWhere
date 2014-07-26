@@ -114,7 +114,7 @@
             var windowHeight = $(window).scrollTop();
             $('.fallzu-scroll-area').prepend(
                 '<div class="fallzu-scroll-btn fallzu-scroll-anchor" data-scroll="' + windowHeight +  '">' +
-                    '<a href="#"><i class="fa fa-file-text-o fa-3x"></i></a>' +
+                    '<a href="#"><i class="fa fa-anchor fa-3x"></i></a>' +
                 '</div>'
             );
             setCSS(options.fontColor, options.bgColor);
