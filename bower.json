@@ -1,0 +1,21 @@
+{
+  "name": "FallZu-jQuery-scrollWhere",
+  "version": "1.0.1",
+  "homepage": "https://github.com/johnson4932/FallZu-jQuery-scrollWhere",
+  "authors": [
+    "JohnsonLu <johnson4932@gmail.com>"
+  ],
+  "description": "jQuery plugin that adds \"Go Back\" button to a page.",
+  "main": "fallzu.jquery.scrollwhere.js",
+  "keywords": [
+    "Fallzu"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
