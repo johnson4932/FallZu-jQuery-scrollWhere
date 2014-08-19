@@ -13,6 +13,9 @@ jQuery plugin that adds "Go Back" button to a page.
 ## Installation
 
 Include the production file after [Font Awesome](http://fortawesome.github.io/Font-Awesome/) and jQuery.
+```shell
+bower install fallzu-jquery-scrollwhere
+```
 
 ```html
 <link href="css/font-awesome.min.css" rel="stylesheet">
